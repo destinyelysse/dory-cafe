@@ -5,62 +5,89 @@
         <link href="./resources/css/index.css" type="text/css" rel="stylesheet">
     </head>
     <body>
+
         <header>
-            <a href="index.html" class="logo">Dory Cafe</a>
-            <nav class="desktop">
-                <ul>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="meetdory.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="book.html">Book Now</a></li>
-                </ul>
-            </nav>
+            <div class="flex container top-nav-bar">
+                <a href="index.html" class="logo">Dory Cafe</a>
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="book.html">Book</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="meetdory.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
-        <main>
-            <div class="about-container">
-                <h1 class="pink title">Welcome to Dory Cafe</h1>
-                <!-- ABOUT DORY -->
-                <div class="about-dory">
-                    <div class="dory-info">
-                        <h2 class="pink subtitle">Meet Dory, your cafe companion.</h2>
-                        <p class=" pink dory-details">Dory is a 15 year old domestic shorthair cat. She loves to nap, cuddle, and play.</p>
-                    </div>
-                    <div class="dory-image-container">
-                    </div>
+
+        <main class="faded-coral-bg">
+            <div class="flex wrap">
+
+                <div class="welcome">
+                    <h1 class="faded-green title">Welcome to Dory Cafe!</h1>
+                    <section class="meet-dory">
+                        <h2 class="faded-green subtitle">Meet Dory, your cafe companion.</h2>
+                        <img src="resources/images/dory/dory-looking.JPEG" alt="a cat turning around to look at the camera">
+                        <h3 class="faded-green subsubtitle">At the tender age of 16, she is excited to cuddle, play, and nap during your visit.</h3>
+                    </section>
                 </div>
+
                 <!-- CAFE AMENITIES-->
                 <div class="amenities">
-                    <div class="amenities-images">
-                        <div class="amenities-image-container">
-                        </div>
-                        <div class="amenities-image-container">
-                        </div>
-                    </div>
-                    <div amenities-info>
-                        <h2 class="pink subtitle">Cafe Amenities</h2>
+                    <div class="amenities-info">
+                        <h2 class="faded-green subtitle">A space designed to entertain.</h2>
+                        <h3 class="faded-green subsubtitle">Amenities</h3>
                         <ul class="amenities-list">
-                            <li>Take photos with Dory in an elegant, uplifting atmosphere.</li>
-                            <li>Enjoy handcrafted beverages and light bites.</li>
-                            <li>Stay entertained with our 75-inch 4k display and surround sound system.</li>
-                            <li>Book the cafe to yourself or host a private party with up to 5 guests.</li>
+                            <li>The cutest, softest, most snuggly host</li>
+                            <li>Handcrafted beverages and light bites</li>
+                            <li>An elegant atmostphere with adjustable Hue lighting system</li>
+                            <li>75-inch 4k display and surround sound system</li>
+                            <li>Book the cafe to yourself or host a private party with up to 5 guests</li>
                         </ul>
                     </div>
-                </div>
-                <!-- ABOUT SPACE -->
-                <div class="about-space">
-                    <div class="space-description">
-                        <h2 class="space-subtitle">A space designed to entertain.</h2>
-                        <p class="space-details">Ample seating, pillows, blankets, and dining space.</p>
-                    </div>
-                    <div class="space-image">
-                        <div class="space-image-container"></div>
+                    <div class="amenities-image-container">
+                        <img src="resources/images/lighting.jpg" alt="warm lights">
                     </div>
                 </div>
             </div>
+
+            <div class="schedule">
+                <p class="faded-green subtitle">Cafe Hours</p>
+                <table>
+                    <tr>
+                        <td>M</td>
+                        <td>10AM to 9PM</td>
+                    </tr>
+                    <tr>
+                        <td>T</td>
+                        <td>10AM to 9PM</td>
+                    </tr>
+                    <tr>
+                        <td>W</td>
+                        <td>10AM to 9PM</td>
+                    </tr>
+                    <tr>
+                        <td>T</td>
+                        <td>10AM to 9PM</td>
+                    </tr>
+                    <tr>
+                        <td>F</td>
+                        <td>10AM to 9PM</td>
+                    </tr>
+                    <tr>
+                        <td>S</td>
+                        <td>10AM to 10PM</td>
+                    </tr>
+                    <tr>
+                        <td>S</td>
+                        <td>1PM to 7PM</td>
+                    </tr>
+                </table>
+            </div>
         </main>
         <footer>
-            <h1 class="pink title">Make Your Reservation</h1>
-            <button class="book-button">BOOK NOW</button>
+            <h1 class="faded-green title">Make Your Reservation</h1>
+            <button class="book-button">Book a Playdate</button>
             <a href="#top" class="back-to-top">Back to top</a>
         </footer>
     </body>

@@ -5,28 +5,34 @@
         <link href="./resources/css/index.css" type="text/css" rel="stylesheet"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
+
     <body>
-        <header id="top">
-            <a href="index.html" class="logo">Dory Cafe</a>
-            <nav class="desktop">
-                <ul>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="meetdory.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="book.html">Book Now</a></li>
-                </ul>
-            </nav>
+
+        <header>
+            <div class="flex container top-nav-bar">
+                <a href="index.html" class="logo">Dory Cafe</a>
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="book.html">Book</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="meetdory.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
-        <main class="grey-background menu-container">
-            <h1 class="pink title">Dory Cafe Menu</h1>
-            <h2 class="pink subtitle">Dory Cafe offers a variety of beverages and small dishes to enjoy during your visit.</h2>
+
+        <main class="flex wrap faded-coral-bg">
+            <h1 class="faded-green title">Dory Cafe Menu</h1>
+            <h2 class="faded-green subtitle">Dory Cafe offers a variety of beverages and small bites to enjoy during your visit.</h2>
             <hr>
             <!-- BEVERAGES -->
             <div class="menu-category">
                 <h3 class="menu-category-label">Beverages</h3>
-                <div class="menu-items">
+                <div class="flex wrap menu-items">
                     <div class="menu-item">
                         <div class="image-container">
+                            <img src="resources/images/menu/green-tea.JPG" alt="">
                         </div>
                         <div class="menu-item-details">
                             <p class="item-name">Green Tea</p>
@@ -35,14 +41,16 @@
                     </div>
                     <div class="menu-item">
                         <div class="image-container">
+                            <img src="resources/images/menu/black-tea.JPG" alt="">
                         </div>
                         <div class="menu-item-details">
-                            <p class="item-name">Sleepy Tea</p>
+                            <p class="item-name">Black Tea</p>
                             <p>$2.50</p>
                         </div>
                     </div>
                     <div class="menu-item">
                         <div class="image-container">
+                            <img src="resources/images/menu/green-tea.JPG" alt="">
                         </div>
                         <div class="menu-item-details">
                             <p class="item-name">Peppermint Tea</p>
@@ -51,6 +59,16 @@
                     </div>
                     <div class="menu-item">
                         <div class="image-container">
+                            <img src="resources/images/menu/hot-chocolate.JPG" alt="">
+                        </div>
+                        <div class="menu-item-details">
+                            <p class="item-name">Hot Chocolate</p>
+                            <p>$4</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="image-container">
+                            <img src="resources/images/menu/soda.JPG" alt="">
                         </div>
                         <div class="menu-item-details">
                             <p class="item-name">Soda</p>
@@ -59,6 +77,7 @@
                     </div>
                     <div class="menu-item">
                         <div class="image-container">
+                            <img src="resources/images/menu/lemon-water.JPG" alt="">
                         </div>
                         <div class="menu-item-details">
                             <p class="item-name">Lemon Water</p>
@@ -71,9 +90,10 @@
             <!-- MAINS -->
             <div class="menu-category">
                 <h3 class="menu-category-label">Mains</h3>
-                <div class="menu-items">
+                <div class="flex wrap menu-items">
                     <div class="menu-item">
                         <div class="image-container">
+                            <img src="resources/images/menu/garden-salad.JPG" alt="">
                         </div>
                         <div class="menu-item-details">
                             <p class="item-name">Garden Salad</p>
@@ -82,6 +102,7 @@
                     </div>
                     <div class="menu-item">
                         <div class="image-container">
+                            <img src="resources/images/menu/blt.JPG" alt="">
                         </div>
                         <div class="menu-item-details">
                             <p class="item-name">BLT</p>
@@ -90,18 +111,11 @@
                     </div>
                     <div class="menu-item">
                         <div class="image-container">
+                            <img src="resources/images/menu/caprese.JPG" alt="">
                         </div>
                         <div class="menu-item-details">
                             <p class="item-name">Caprese</p>
                             <p>$9.50</p>
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="image-container">
-                        </div>
-                        <div class="menu-item-details">
-                            <p class="item-name">Club</p>
-                            <p>$10</p>
                         </div>
                     </div>
                 </div>
@@ -110,7 +124,7 @@
             <!-- DESSERTS -->
             <div class="menu-category">
                 <h3 class="menu-category-label">Desserts</h3>
-                <div class="menu-items">
+                <div class="flex wrap menu-items">
                     <div class="menu-item">
                         <div class="image-container">
                         </div>
@@ -149,8 +163,8 @@
         </main>
         <!-- FOOTER -->
         <footer>
-            <h1 class="pink title">Make Your Reservation</h1>
-            <button class="book-button">BOOK NOW</button>
+            <h1 class="faded-green title">Make Your Reservation</h1>
+            <button class="book-button">Book a Playdate</button>
             <a href="#top" class="back-to-top">Back to top</a>
         </footer>
     </body>
