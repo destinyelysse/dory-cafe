@@ -5,66 +5,24 @@
         <link href="./resources/css/index.css" type="text/css" rel="stylesheet"/>
     </head>
     <body>
-        <!-- NAV -->
         <header>
-            <div class="flex container top-nav-bar">
+            <nav class="bar">
                 <a href="index.html" class="logo">Dory Cafe</a>
-                <nav class="desktop-nav">
-                    <ul>
-                        <li><a href="book.html">Book</a></li>
-                        <li><a href="menu.html">Menu</a></li>
-                        <li><a href="meetdory.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
+                <ul class="nav-links">
+                    <li><a href="reserve.html" class="nav-link">RESERVE</a></li>
+                    <li><a href="menu.html" class="nav-link">MENU</a></li>
+                    <li><a href="meetdory.html" class="nav-link">ABOUT</a></li>
+                    <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+                </ul>
+                <button class="hamburger">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </nav>
         </header>
-
-
         <main>
-            <h1 class="pink title">Book a Playdate</h1>
-            <div class="book-form">
-                <form action="" method="POST">
-                    <div class="contact-form">
-                        <p class="form-section-label">Contact Information</p>
-                        <div class="form-name">
-                            <label class="contact-label" for="name">Your Name</label>
-                            <input type="text" name="name" id="name" value="name" onfocus="this.value=''; this.onfocus=null;" required>
-                        </div>
-                        <div class="form-email">
-                            <label class="contact-label" for="email">Your Email</label>
-                            <input type="text" name="email" id="email" value="email" required>
-                        </div>
-                    </div>
-                    <div class="booking-type">
-                        <p class="form-section-label">Booking Type</p>
-                        <div class="regular-booking">
-                            <input id="regular-booking" name="booking-type" type="radio" value="regular-booking">
-                            <label for="regular-booking">Regular Dory Cafe Reservation</label>
-                        </div>
-                        <div class="special-event">
-                            <input id="special-event" name="booking-type" type="radio" value="special-event">
-                            <label for="special-event">Special Event Registration</label>
-                        </div>
-                        <div class="rent-out">
-                            <input id="rent-out" name="booking-type" type="radio" value="rent-out">
-                            <label for="rent-out">Private Event</label>
-                        </div>
-                    </div>
-                    <div class="attendees">
-                        <p class="form-section-label">How many in your party?</p>
-                        <p class="form-section-label">(up to 6)</p>
-                        <input id="tickets-to-book" name="tickets-to-book" type="number" step="1" required>
-                    </div>
-                    <div class="additional-notes">
-                        <p class="form-section-label">Additional Notes</p>
-                        <textarea id="comments" rows="5" cols="30">Enter any additional comments</textarea>
-                    </div>
-                    <div class="book-it-button-container">
-                        <input id="book-it" type="submit" value="Book it!">
-                    </div>
-                </form>
-            </div>
+            <h1 class="page-title">Reservation System Coming Soon!</h1>
         </main>
     </body>
 </html>
