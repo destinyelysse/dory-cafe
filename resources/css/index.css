@@ -6,13 +6,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 
 :root {
-    --faded-mint: hsl(140, 13%, 86%);
-    --faded-jade: hsl(52, 15%, 78%);
     --faded-rose: hsl(3, 55%, 85%);
     --faded-coral: hsl(15, 56%, 89%);
     --faded-green: hsl(68, 8%, 53%);
-    --lavender: #968ea6;
-    --background: #968ea6;
+    --lavender: #a98eaa;
+    --background: #493e48;
     --text: hsl(3, 55%, 85%);
     --main-font: "Sacramento";
     --secondary-font: "Montserrat";
@@ -32,7 +30,6 @@ html {
 }
 
 /* HOME */
-
 #home {
     min-height: 100%;
     min-width: 100%;
@@ -60,10 +57,10 @@ html {
     padding: 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    color: var(--lavender);
+    color: var(--background);
     background-color: var(--faded-rose);
     border: 5px solid var(--faded-rose);
-    outline: 3px dashed var(--lavender);
+    outline: 3px dashed var(--background);
     outline-offset: -8px;
     font-size: 5rem;
     font-family: var(--main-font);
@@ -93,58 +90,6 @@ html {
     font-size: 2rem;
     color: var(--faded-coral);
     text-decoration: none;
-}
-
-
-
-
-
-
-
-
-
-.subsubtitle {
-    display: block;
-    font-size: 2rem;
-    text-align: center;
-    padding: 2rem;
-}
-
-.book-button {
-    padding: 1rem;
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
-    color: var(--faded-green);
-    background-color: var(--faded-rose);
-    border: 5px solid var(--faded-rose);
-    outline: 2px dashed var(--faded-green);
-    outline-offset: -7px;
-    font-size: 3rem;
-    font-family: "Lora";
-    display: block;
-}
-
-.book-button:hover {
-    color: var(--faded-green);
-    background-color: var(--faded-coral);
-    border-color: var(--faded-coral);
-}
-
-footer { 
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.back-to-top {
-    color: var(--text);
-    font-size: 1rem;
-    width: 100vw;
-    text-align: center;
-    padding: 1rem;
 }
 
 /* NAV */
@@ -192,8 +137,7 @@ footer {
     text-decoration: underline;
 }
 
-  /* HAMBURGER NAV */
-
+/* HAMBURGER NAV */
 .hamburger {
     display: none;
 }
@@ -252,7 +196,6 @@ footer {
 }
 
 /* Page Utilities */
-
 .page-title {
     margin-top: 1rem;
     width: 100%;
@@ -271,41 +214,38 @@ footer {
     text-align: center;
 }
 
-
-
-.container {
-    padding: 1rem;
-}
-
-.flex {
+footer { 
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-.wrap {
-    flex-wrap: wrap;
+.footer-logo {
+    display: inline;
+    font-family: 'Sacramento';
+    font-size: 3rem;
+    padding: 0rem .5rem;
+    margin: 2rem;
+    color: var(--background);
+    background: var(--text);
+    border: 10px solid var(--text);
+    outline: 2px dashed var(--background);
+    outline-offset: -7px;
+    text-decoration: none;
 }
 
-.faded-rose {
-    color: var(--faded-rose);
+.back-to-top {
+    color: var(--text);
+    font-size: 1rem;
+    width: 100vw;
+    text-align: center;
+    padding: 1rem;
 }
-
-.faded-coral-bg {
-    background-color: var(--faded-coral);
-}
-
-.faded-green {
-    color: var(--faded-green);
-}
-
-.faded-green-bg {
-    background-color: var(--faded-green);
-}
-
 
 /* MENU */
-
 .menu-category-label {
     color: var(--text);
     font-family: 'Sacramento';
@@ -351,35 +291,35 @@ footer {
 }
 
 /* About */
-
-.about-dory {
+.about-dory-section {
+    padding: 2rem;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100vw;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
 }
 
-.meet-dory {
-    width: 97vw;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    text-align: left;
-    padding: 1rem;
+.about-highlight {
+    margin-top: 3rem;
+    font-size: 2rem;
+    font-family: var(--secondary-font);
+    text-align: center;
 }
 
-.meet-dory img {
+.meet-dory-details {
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+}
+
+.about-dory-section img {
     width: 30vw;
     height: auto;
     border-radius: 10px;
-    box-shadow: 5px 5px var(--faded-rose);
-}
-
-.amenities {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
+    box-shadow: 5px 5px var(--text);
 }
 
 .amenities-info {
@@ -392,12 +332,13 @@ footer {
     height: auto;
     margin: 2.5rem;
     border-radius: 10px;
-    box-shadow: 5px 5px var(--faded-rose);
+    box-shadow: 5px 5px var(--text);
 }
 
 .amenities-list li {
-    color: var(--faded-green);
-    font-size: 2rem;
+    color: var(--text);
+    font-size: 1.5rem;
+    margin: .25rem;
 }
 
 table {
@@ -408,7 +349,7 @@ table {
 }
 
 td {
-    color: var(--faded-green);
+    color: var(--text);
     font-size: 2rem;
     padding: .5rem;
 }
