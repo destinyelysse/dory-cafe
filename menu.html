@@ -5,11 +5,9 @@
         <link href="./resources/css/index.css" type="text/css" rel="stylesheet"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-
     <body>
-
         <header>
-            <div class="flex container top-nav-bar">
+            <!-- <div class="flex container top-nav-bar">
                 <a href="index.html" class="logo">Dory Cafe</a>
                 <nav class="desktop-nav">
                     <ul>
@@ -19,74 +17,64 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
-            </div>
+            </div> -->
+            <nav class="bar">
+                <a href="index.html" class="logo">Dory Cafe</a>
+                <ul class="nav-links">
+                    <li><a href="menu.html" class="nav-link">MENU</a></li>
+                    <li><a href="meetdory.html" class="nav-link">ABOUT</a></li>
+                    <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+                    <li><a href="reserve.html" class="nav-link">RESERVE</a></li>
+                </ul>
+                <button class="hamburger">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </nav>
         </header>
-
-        <main class="flex wrap faded-coral-bg">
-            <h1 class="faded-green title">Dory Cafe Menu</h1>
-            <h2 class="faded-green subtitle">Dory Cafe offers a variety of beverages and small bites to enjoy during your visit.</h2>
-            <hr>
+        <main>
+            <h1 class="page-title">Menu</h1>
+            <h2 class="subtitle">We offer a variety of refreshments and fares to enjoy during your visit.</h2>
             <!-- BEVERAGES -->
             <div class="menu-category">
                 <h3 class="menu-category-label">Beverages</h3>
-                <div class="flex wrap menu-items">
+                <div class="menu-items">
                     <div class="menu-item">
-                        <div class="image-container">
-                            <img src="resources/images/menu/green-tea.JPG" alt="">
-                        </div>
                         <div class="menu-item-details">
-                            <p class="item-name">Green Tea</p>
-                            <p>$2.50</p>
+                            <p class="item-name">WATER</p>
+                            <p>Still 2</p>
+                            <p>Sparkling 2.50</p>
+                            <p>Add Flavor .50</p>
                         </div>
                     </div>
                     <div class="menu-item">
-                        <div class="image-container">
-                            <img src="resources/images/menu/black-tea.JPG" alt="">
-                        </div>
                         <div class="menu-item-details">
-                            <p class="item-name">Black Tea</p>
-                            <p>$2.50</p>
+                            <p class="item-name">SPECIALTY TEAS</p>
+                            <p>Green</p>
+                            <p>English Breakfast</p>
+                            <p>Earl Grey</p>
+                            <p>Peppermint</p>
+                            <p>Oolong</p>
+                            <p class="price">3.50</p>
                         </div>
                     </div>
-                    <div class="menu-item">
-                        <div class="image-container">
-                            <img src="resources/images/menu/green-tea.JPG" alt="">
-                        </div>
-                        <div class="menu-item-details">
-                            <p class="item-name">Peppermint Tea</p>
-                            <p>$2.50</p>
-                        </div>
+                    <div class="image-container">
+                        <img src="resources/images/menu/green-tea.JPG" alt="">
                     </div>
                     <div class="menu-item">
-                        <div class="image-container">
-                            <img src="resources/images/menu/hot-chocolate.JPG" alt="">
-                        </div>
                         <div class="menu-item-details">
-                            <p class="item-name">Hot Chocolate</p>
-                            <p>$4</p>
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="image-container">
-                            <img src="resources/images/menu/soda.JPG" alt="">
-                        </div>
-                        <div class="menu-item-details">
-                            <p class="item-name">Soda</p>
-                            <p>$3.50</p>
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="image-container">
-                            <img src="resources/images/menu/lemon-water.JPG" alt="">
-                        </div>
-                        <div class="menu-item-details">
-                            <p class="item-name">Lemon Water</p>
-                            <p>$2</p>
+                            <p class="item-name">CRAFT SODA</p>
+                            <p>Cola</p>
+                            <p>Lemon Lime</p>
+                            <p>Orange</p>
+                            <p>Lavender</p>
+                            <p>Rose</p>
+                            <p class="price">4.50</p>
                         </div>
                     </div>
                 </div>  
             </div>
-            <hr>
             <!-- MAINS -->
             <div class="menu-category">
                 <h3 class="menu-category-label">Mains</h3>
@@ -120,11 +108,19 @@
                     </div>
                 </div>
             </div>
-            <hr>
             <!-- DESSERTS -->
             <div class="menu-category">
                 <h3 class="menu-category-label">Desserts</h3>
                 <div class="flex wrap menu-items">
+                    <div class="menu-item">
+                        <div class="image-container">
+                            <img src="resources/images/menu/hot-chocolate.JPG" alt="">
+                        </div>
+                        <div class="menu-item-details">
+                            <p class="item-name">Hot Chocolate</p>
+                            <p>$4</p>
+                        </div>
+                    </div>
                     <div class="menu-item">
                         <div class="image-container">
                         </div>
@@ -159,12 +155,11 @@
                     </div>
                 </div>
             </div>
-            <hr>
         </main>
         <!-- FOOTER -->
         <footer>
-            <h1 class="faded-green title">Make Your Reservation</h1>
-            <button class="book-button">Book a Playdate</button>
+            <h1 class="logo">Dory Cafe</h1>
+            <a class="site-link">RESERVE A PLAYDATE</a>
             <a href="#top" class="back-to-top">Back to top</a>
         </footer>
     </body>
