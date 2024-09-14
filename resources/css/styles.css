@@ -10,8 +10,8 @@
   --faded-coral: hsl(15, 56%, 89%);
   --faded-green: hsl(68, 8%, 53%);
   --lavender: #a98eaa;
-  --background: #493e48;
-  --text: hsl(3, 55%, 85%);
+  --background: #0d0a0f;
+  --text-color: hsl(3, 55%, 85%);
   --main-font: "Sacramento";
   --secondary-font: "Montserrat";
 }
@@ -26,7 +26,11 @@
 html {
   height: 100%;
   background-color: var(--background);
-  color: var(--text);
+  color: var(--text-color);
+}
+
+.d-none {
+  display: none;
 }
 
 .flex-col {
@@ -161,45 +165,43 @@ html {
 /* NAV */
 .bar {
   width: 100%;
-  padding: 0.5rem 0.7rem;
+  padding: 2rem 3rem;
   display: flex;
-  flex-direction: column;
-  justify-content: baseline;
-  align-items: center;
-  background-color: var(--background);
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .logo {
   display: inline;
-  font-family: "Sacramento";
+  font-family: var(--main-font);
   font-size: 3rem;
-  padding: 0rem 0.5rem;
+  padding: 0.5rem;
   color: var(--background);
-  background: var(--text);
-  border: 10px solid var(--text);
+  background: var(--text-color);
+  border: 10px solid var(--text-color);
   outline: 2px dashed var(--background);
   outline-offset: -7px;
   text-decoration: none;
 }
 
 .nav-links {
-  padding: 1rem 0 0 0;
+  padding: 0;
   display: flex;
   justify-content: flex-end;
   list-style-type: none;
   font-family: var(--secondary-font);
-  color: var(--text);
+  color: var(--text-color);
 }
 
 .nav-link {
   padding: 1rem;
   font-size: 2rem;
-  color: var(--text);
+  color: var(--text-color);
   text-decoration: none;
 }
 
 .nav-link:hover {
-  color: var(--text);
+  color: var(--text-color);
   text-decoration: underline;
 }
 
@@ -215,10 +217,30 @@ html {
   margin-top: 5px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: var(--accent);
+  background-color: var(--lavender);
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 1000px) {
+  .logo {
+    font-size: 2rem;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
   .nav-links {
     position: fixed;
     left: 100%;
@@ -237,13 +259,13 @@ html {
 
   .nav-links.active {
     left: 0;
-    background-color: var(--main);
+    background-color: var(--background);
   }
 
   .hamburger {
     display: block;
     cursor: pointer;
-    background-color: var(--main);
+    background-color: var(--background);
     border: none;
     margin-right: 0.5rem;
   }
@@ -266,7 +288,7 @@ html {
   margin-top: 1rem;
   width: 100%;
   display: block;
-  color: var(--text);
+  color: var(--text-color);
   font-size: 4rem;
   font-family: var(--main-font);
   text-align: center;
@@ -296,15 +318,15 @@ footer {
   padding: 0rem 0.5rem;
   margin: 2rem;
   color: var(--background);
-  background: var(--text);
-  border: 10px solid var(--text);
+  background: var(--text-color);
+  border: 10px solid var(--text-color);
   outline: 2px dashed var(--background);
   outline-offset: -7px;
   text-decoration: none;
 }
 
 .back-to-top {
-  color: var(--text);
+  color: var(--text-color);
   font-size: 1rem;
   width: 100vw;
   text-align: center;
@@ -313,7 +335,7 @@ footer {
 
 /* MENU */
 .menu-category-label {
-  color: var(--text);
+  color: var(--text-color);
   font-family: "Sacramento";
   font-size: 3.5rem;
   text-align: center;
@@ -419,7 +441,7 @@ tr {
 }
 
 td {
-  color: var(--text);
+  color: var(--text-color);
   font-size: 2rem;
   padding: 0.5rem;
 }
