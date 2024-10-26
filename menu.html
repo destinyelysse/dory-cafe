@@ -22,111 +22,161 @@
         </button>
       </nav>
     </header>
-    <main>
+    <main class="menu-container">
       <h1 class="page-title">Menu</h1>
       <h2 class="subtitle">
         We offer a variety of refreshments and fares to enjoy during your visit.
       </h2>
+      <nav class="menu-links">
+        <a class="menu-link" href="#beverages">Beverages</a>
+        <a class="menu-link" href="#mains">Mains</a>
+        <a class="menu-link" href="#dessert">Dessert</a>
+      </nav>
+      <hr />
       <div class="menu-category">
-        <h3 class="menu-category-label">Beverages</h3>
+        <h3 class="menu-category-label" id="beverages">Beverages</h3>
         <div class="menu-items">
           <div class="menu-item">
-            <div class="menu-item-details">
-              <p class="item-name">WATER</p>
-              <p>Still 2</p>
-              <p>Sparkling 2.50</p>
-              <p>Add Flavor .50</p>
+            <div class="item-title item-and-price">
+              <p>CRAFT SODA</p>
+              <p>5</p>
             </div>
+            <ul>
+              <li>Cola</li>
+              <li>Lemon Lime</li>
+              <li>Orange</li>
+              <li>Lavender</li>
+              <li>Rose</li>
+            </ul>
           </div>
           <div class="menu-item">
-            <div class="menu-item-details">
-              <p class="item-name">SPECIALTY TEAS</p>
-              <p>Green</p>
-              <p>English Breakfast</p>
-              <p>Earl Grey</p>
-              <p>Peppermint</p>
-              <p>Oolong</p>
-              <p class="price">3.50</p>
+            <div class="item-title item-and-price">
+              <p>WATER</p>
+              <p>2</p>
             </div>
+            <p>Still or sparkling.</p>
+            <p>Add Flavor for .50</p>
           </div>
-          <div class="image-container">
-            <img src="resources/images/menu/green-tea.JPG" alt="" />
-          </div>
-          <div class="menu-item">
+
+          <div class="menu-item item-with-photo">
+            <img
+              class="menu-item-image"
+              src="resources/images/menu/green-tea.JPG"
+              alt=""
+            />
             <div class="menu-item-details">
-              <p class="item-name">CRAFT SODA</p>
-              <p>Cola</p>
-              <p>Lemon Lime</p>
-              <p>Orange</p>
-              <p>Lavender</p>
-              <p>Rose</p>
-              <p class="price">4.50</p>
+              <div class="item-title item-and-price">
+                <p>SPECIALTY TEAS</p>
+                <p>3</p>
+              </div>
+              <ul>
+                <li>Green</li>
+                <li>English Breakfast</li>
+                <li>Earl Grey</li>
+                <li>Peppermint</li>
+                <li>Oolong</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
+      <hr />
       <div class="menu-category">
-        <h3 class="menu-category-label">Mains</h3>
+        <h3 class="menu-category-label" id="mains">Mains</h3>
         <div class="menu-items">
-          <div class="image-container">
-            <img src="resources/images/menu/garden-salad.JPG" alt="" />
-          </div>
-          <div class="menu-item">
+          <div class="menu-item item-with-photo">
+            <img
+              class="menu-item-image"
+              src="resources/images/menu/garden-salad.JPG"
+              alt=""
+            />
             <div class="menu-item-details">
-              <p class="item-name">Garden Salad</p>
-              <p>$6.50</p>
-            </div>
-          </div>
-          <div class="menu-item">
-            <div class="image-container">
-              <img src="resources/images/menu/blt.JPG" alt="" />
-            </div>
-            <div class="menu-item-details">
-              <p class="item-name">BLT</p>
-              <p>$9.50</p>
+              <div class="item-and-price">
+                <p>GARDEN SALAD</p>
+                <p>8</p>
+              </div>
             </div>
           </div>
-          <div class="menu-item">
-            <div class="image-container">
-              <img src="resources/images/menu/caprese.JPG" alt="" />
-            </div>
+          <div class="menu-item item-with-photo">
             <div class="menu-item-details">
-              <p class="item-name">Caprese</p>
-              <p>$9.50</p>
+              <div class="item-and-price">
+                <p>BLT</p>
+                <p>12</p>
+              </div>
+              <p class="item-details">
+                Applewood Smoked Bacon, Iceburg lettuce, tomato, salt, pepper,
+                olive oil on Ciabatta
+              </p>
+            </div>
+            <img
+              class="menu-item-image"
+              src="resources/images/menu/blt.JPG"
+              alt=""
+            />
+          </div>
+          <div class="menu-item item-with-photo">
+            <img
+              class="menu-item-image"
+              src="resources/images/menu/caprese.JPG"
+              alt=""
+            />
+            <div class="menu-item-details">
+              <div class="item-and-price">
+                <p>Prosciutto Caprese</p>
+                <p>15</p>
+              </div>
+              <p class="item-details">
+                Prosciutto, Tomato, Mozzarella, Iceburg lettuce, salt, pepper,
+                olive oil on Ciabatta
+              </p>
             </div>
           </div>
         </div>
       </div>
+      <hr />
       <div class="menu-category">
-        <h3 class="menu-category-label">Desserts</h3>
+        <h3 class="menu-category-label" id="dessert">Desserts</h3>
         <div class="menu-items">
-          <div class="menu-item">
+          <div class="menu-item item-with-photo">
+            <img
+              class="menu-item-image"
+              src="resources/images/menu/hot-chocolate.JPG"
+              alt=""
+            />
             <div class="menu-item-details">
-              <p class="item-name">HOLIDAY HOT CHOCOLATE</p>
-              <p class="price">4</p>
+              <div class="item-and-price">
+                <p>Holiday Hot Chocolate</p>
+                <p>4</p>
+              </div>
+              <p class="item-details">
+                Cocoa, Vanilla, a touch of Peppermint. Sub Almond, Soy, or
+                Coconut Milk at no cost. Topped with (vegan) whipped cream and
+                sprinkles.
+              </p>
             </div>
           </div>
-          <div class="image-container">
-            <img src="resources/images/menu/hot-chocolate.JPG" alt="" />
-          </div>
           <div class="menu-item">
-            <div class="menu-item-details">
-              <p class="item-name">BAKED TREATS</p>
-              <p>Frosted Sugar Cookie</p>
-              <p>Chocolate Chip Cookie</p>
-              <p>Birthday Cake Slice</p>
-              <p>Chocolate Cake Slice</p>
-              <p>Carrot Cake Slice</p>
-              <p class="price">4.50</p>
+            <div class="item-title item-and-price">
+              <p>BAKED TREATS</p>
+              <p>7</p>
             </div>
+            <ul>
+              <li>Frosted Sugar Cookie</li>
+              <li>Chocolate Chip Cookie</li>
+              <li>Chocolate Cake Slice</li>
+              <li>Red Velvet Cake Slice</li>
+              <li>Carrot Cake Slice</li>
+            </ul>
           </div>
           <div class="menu-item">
-            <div class="menu-item-details">
-              <p class="item-name">CANDY BOWL</p>
-              <p>Gummy Bears</p>
-              <p>M&Ms</p>
-              <p>Skittles</p>
-              <p class="price">2.50</p>
+            <div class="item-title item-and-price">
+              <p>CANDY SAMPLER</p>
+              <p>8</p>
+            </div>
+            <p class="item-details">Gummy Worms, M&Ms, Skittles</p>
+            <div class="item-and-price">
+              <p>BOTTOMLESS CANDY BAR</p>
+              <p>20</p>
             </div>
           </div>
         </div>

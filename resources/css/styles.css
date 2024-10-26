@@ -11,6 +11,7 @@
   --faded-green: hsl(68, 8%, 53%);
   --lavender: #a98eaa;
   --background: #0d0a0f;
+  --background-shade: rgba(13, 10, 15, 0.75);
   --text-color: hsl(3, 55%, 85%);
   --main-font: "Sacramento";
   --secondary-font: "Montserrat";
@@ -37,6 +38,14 @@ hr {
   border: 1px dashed var(--lavender);
   width: 75%;
   margin: 2rem;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
 
 .flex-col {
@@ -338,7 +347,34 @@ footer {
   padding: 1rem;
 }
 
-/* MENU */
+/* || MENU */
+.menu-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-link {
+  margin: 1rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--faded-rose);
+  border: 1px solid var(--faded-rose);
+  text-decoration: none;
+}
+
+.menu-link:hover {
+  background-color: var(--faded-rose);
+  color: var(--background);
+}
+
+.menu-category {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
 .menu-category-label {
   color: var(--text-color);
   font-family: "Sacramento";
@@ -348,10 +384,68 @@ footer {
 }
 
 .menu-items {
-  width: 100vw;
+  border: 1px solid red;
+  max-width: 90%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: top;
+}
+
+.menu-item {
+  width: 75%;
+  margin: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-items: center;
+  align-items: top;
+}
+
+.item-with-photo {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.menu-item ul {
+  padding: 1rem;
+}
+
+.menu-item ul li {
+  list-style-type: none;
+}
+
+.menu-item-image {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.menu-item-details {
+  padding: 2rem;
+  width: 100;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: left;
+  justify-content: center;
+}
+
+.item-title {
+  font-size: 1.75rem;
+  padding: 0.5rem;
+}
+
+.item-and-price {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  border: 1px solid yellow;
+}
+
+.item-details {
+  width: 100%;
+  padding: 1rem;
 }
 
 .image-container {
@@ -364,23 +458,6 @@ footer {
   height: 100%;
   object-fit: cover;
   border-radius: 7px;
-  box-shadow: 5px 5px var(--faded-rose);
-}
-
-.menu-item-details {
-  font-size: 1.2rem;
-  text-align: center;
-  padding: 1rem;
-}
-
-.item-name {
-  font-size: 1.75rem;
-  margin: 0.5rem;
-}
-
-.price {
-  font-size: 1rem;
-  margin: 0.5rem;
 }
 
 /* About */
@@ -558,12 +635,4 @@ form {
   margin: 1rem;
   padding: 1rem;
   width: 25vw;
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  * {
-    transition-duration: 0.001ms !important;
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-  }
 }
