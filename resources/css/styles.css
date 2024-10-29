@@ -566,7 +566,7 @@ form {
   font-size: 1.5rem;
   font-family: var(--secondary-font);
   border: 1px solid grey;
-  border-radius: 0;
+  border-radius: 0px;
 }
 
 .form-field:focus {
@@ -590,11 +590,17 @@ form {
 }
 
 .submit-btn {
-  background-color: rgb(62, 62, 62);
   color: pink;
+  background-color: rgb(62, 62, 62);
+
   border-radius: 7px;
-  font-size: 3rem;
+  border: 2px solid var(--background-shade);
+  font-size: 1.5rem;
   margin: 1rem;
   padding: 1rem;
-  width: 25vw;
+}
+
+.submit-btn:hover {
+  background-color: pink;
+  color: rgb(62, 62, 62);
 }
