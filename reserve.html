@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Dory's Cafe - Book</title>
-    <link href="./resources/css/index.css" type="text/css" rel="stylesheet" />
+    <link href="./resources/css/styles.css" type="text/css" rel="stylesheet" />
   </head>
   <body>
     <header>
@@ -21,8 +21,92 @@
         </button>
       </nav>
     </header>
-    <main>
-      <h1 class="page-title">Reservation System Coming Soon!</h1>
+    <main class="registration-form-container">
+      <h1 class="page-title">Book a playdate at Dory's Cafe</h1>
+      <form action="www.example.com" method="POST" id="registration-form">
+        <div class="form-item">
+          <label for="registrant-name" class="form-label"
+            >What is your name?</label
+          >
+          <input
+            type="text"
+            class="form-field"
+            id="registrant-name"
+            name="registrant-name"
+            placeholder="Your Name"
+            maxlength="30"
+            required
+          />
+        </div>
+        <div class="form-item">
+          <label for="registrant-email" class="form-label"
+            >What is your email address?</label
+          >
+          <input
+            type="email"
+            class="form-field"
+            id="registrant-email"
+            name="registrant-email"
+            placeholder="Email"
+            maxlength="50"
+            required
+          />
+        </div>
+
+        <div class="form-item">
+          <label for="number-of-guests" class="form-label"
+            >How many people are in your group?</label
+          >
+          <select
+            class="form-field"
+            id="number-of-guests"
+            name="number-of-guests"
+            value="1"
+            required
+          >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+          </select>
+        </div>
+        <div class="form-item">
+          <label for="date" class="form-label"
+            >Which date would you like to book?</label
+          >
+          <input
+            type="date"
+            class="form-field"
+            id="date"
+            name="date"
+            value="Today"
+            required
+          />
+        </div>
+        <div class="form-item">
+          <label for="time" class="form-label"
+            >What time would you like to book?</label
+          >
+          <input
+            type="time"
+            class="form-field"
+            id="time"
+            name="time"
+            value="Now"
+            required
+          />
+        </div>
+        <div class="form-item">
+          <label for="additional-notes" class="form-label"
+            >Special Notes (optional)</label
+          >
+          <textarea id="additional-notes" class="form-field"></textarea>
+        </div>
+      </form>
     </main>
   </body>
 </html>
