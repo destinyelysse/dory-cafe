@@ -1,17 +1,18 @@
 /* Global Styles */
 
 @import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+
 @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
 
 :root {
   --faded-rose: hsl(3, 55%, 85%);
   --faded-coral: hsl(15, 56%, 89%);
   --faded-green: hsl(68, 8%, 53%);
-  --lavender: #a98eaa;
+  --col-lavender: #a98eaa;
   --background: #0d0a0f;
-  --background-shade: rgba(13, 10, 15, 0.75);
+  --col-background: rgba(13, 10, 15, 0.75);
   --text-color: hsl(3, 55%, 85%);
   --main-font: "Sacramento";
   --secondary-font: "Montserrat";
@@ -26,10 +27,10 @@
 }
 
 * {
-  font-family: var(--secondary-font);
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: var(--secondary-font);
 }
 
 html {
@@ -38,15 +39,15 @@ html {
   color: var(--text-color);
 }
 
-.d-none {
-  display: none;
-}
-
 hr {
-  border: 1px dashed var(--lavender);
+  margin: 2rem;
+  border: 1px dashed var(--col-lavender);
   width: 100%;
   max-width: 800px;
-  margin: 2rem;
+}
+
+.d-none {
+  display: none;
 }
 
 .flex-col {
@@ -59,22 +60,45 @@ hr {
 
 /* HOME */
 #home {
-  min-height: 100%;
-  min-width: 100%;
   position: fixed;
   top: 0;
   left: 0;
+  min-height: 100%;
+  min-width: 100%;
   background-image: url("../images/cafe-main.JPG");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
-  background-color: var(--background-shade);
+  background-color: var(--col-background);
 }
 
 .cta {
   width: 100%;
   height: 100vh;
+}
+
+.home-book-button {
+  display: block;
+  margin: 1em 0em;
+  border: 5px solid var(--faded-rose);
+  outline: 3px dashed var(--background);
+  outline-offset: -8px;
+  padding: 0.25em;
+  background-color: var(--faded-rose);
+  color: var(--background);
+  font-size: 4.5rem;
+  font-family: var(--main-font);
+}
+
+.title {
+  display: block;
+  margin: 0.25em 0em;
+  width: 100%;
+  color: var(--faded-coral);
+  font-size: 4rem;
+  font-family: var(--main-font);
+  text-align: center;
 }
 
 .main-menu {
@@ -83,36 +107,11 @@ hr {
   align-items: center;
 }
 
-.home-book-button {
-  padding: 0.25em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  color: var(--background);
-  background-color: var(--faded-rose);
-  border: 5px solid var(--faded-rose);
-  outline: 3px dashed var(--background);
-  outline-offset: -8px;
-  font-size: 5rem;
-  font-family: var(--main-font);
-  display: block;
-}
-
-.title {
-  margin-top: 0.25em;
-  margin-bottom: 0.25em;
-  width: 100%;
-  display: block;
-  color: var(--faded-coral);
-  font-size: 4rem;
-  font-family: var(--main-font);
-  text-align: center;
-}
-
 .reserve {
   margin: 1rem;
+  color: var(--faded-coral);
   font-size: 3rem;
   font-family: var(--secondary-font);
-  color: var(--faded-coral);
   text-align: center;
 }
 
@@ -120,6 +119,7 @@ hr {
   position: relative;
   z-index: 0;
   display: inline-block;
+  transition: color 0.3s ease-out;
   margin: 0.5rem;
   padding: 5px 5px;
   font-family: var(--secondary-font);
@@ -129,7 +129,6 @@ hr {
   line-height: 1;
   overflow: hidden;
   vertical-align: bottom;
-  transition: color 0.3s ease-out;
 }
 
 .site-link::before {
@@ -139,15 +138,16 @@ hr {
   top: 0;
   left: 0;
   transform: translateY(calc(100% - 2px));
+  transition: transform 0.25s ease-out;
   width: 100%;
   height: 100%;
   background-color: var(--faded-coral);
-  transition: transform 0.25s ease-out;
 }
 
 .site-link:hover {
   color: var(--background);
 }
+
 .site-link:hover::before {
   transform: translateY(0);
   transition: transform 0.25s ease-out;
@@ -209,39 +209,39 @@ hr {
 
 /* NAV */
 .bar {
-  width: 100%;
-  padding: 2rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  width: 100%;
+  padding: 2rem 3rem;
 }
 
 .logo {
   display: inline;
-  font-family: var(--main-font);
-  font-size: 3rem;
-  padding: 0.5rem;
-  color: var(--background);
-  background: var(--text-color);
   border: 10px solid var(--text-color);
   outline: 2px dashed var(--background);
   outline-offset: -7px;
+  padding: 0.5rem;
+  background: var(--text-color);
+  color: var(--background);
+  font-family: var(--main-font);
+  font-size: 3rem;
   text-decoration: none;
 }
 
 .nav-links {
-  padding: 0;
   display: flex;
   justify-content: flex-end;
-  list-style-type: none;
-  font-family: var(--secondary-font);
+  padding: 0;
   color: var(--text-color);
+  font-family: var(--secondary-font);
+  list-style-type: none;
 }
 
 .nav-link {
   padding: 1rem;
-  font-size: 2rem;
   color: var(--text-color);
+  font-size: 2rem;
   text-decoration: none;
 }
 
@@ -256,12 +256,12 @@ hr {
 
 .hamburger-bar {
   display: block;
-  width: 25px;
-  height: 2px;
-  margin-top: 5px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: var(--lavender);
+  margin-top: 5px;
+  width: 25px;
+  height: 2px;
+  background-color: var(--col-lavender);
 }
 
 @media screen and (max-width: 1000px) {
@@ -290,15 +290,15 @@ hr {
     left: 100%;
     top: 5rem;
     flex-flow: column wrap;
-    width: 100%;
-    border-radius: 5px;
-    text-align: center;
     transition: 0.3s;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
   }
 
   .nav-links li {
-    padding: 1.2rem 0;
     margin: 0.2rem;
+    padding: 1.2rem 0;
   }
 
   .nav-links.active {
@@ -308,10 +308,10 @@ hr {
 
   .hamburger {
     display: block;
-    cursor: pointer;
-    background-color: var(--background);
-    border: none;
     margin-right: 0.5rem;
+    border: none;
+    background-color: var(--background);
+    cursor: pointer;
   }
 
   .hamburger.active .hamburger-bar:nth-child(2) {
@@ -329,9 +329,9 @@ hr {
 
 /* Page Utilities */
 .page-title {
+  display: block;
   margin-top: 1rem;
   width: 100%;
-  display: block;
   color: var(--text-color);
   font-size: 4rem;
   font-family: var(--main-font);
@@ -347,34 +347,34 @@ hr {
 }
 
 footer {
-  width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .footer-logo {
   display: inline;
-  font-family: "Sacramento";
-  font-size: 3rem;
-  padding: 0rem 0.5rem;
   margin: 2rem;
-  color: var(--background);
-  background: var(--text-color);
   border: 10px solid var(--text-color);
   outline: 2px dashed var(--background);
   outline-offset: -7px;
+  padding: 0rem 0.5rem;
+  background: var(--text-color);
+  color: var(--background);
+  font-family: "Sacramento";
+  font-size: 3rem;
   text-decoration: none;
 }
 
 .back-to-top {
+  padding: 1rem;
+  width: 100vw;
   color: var(--text-color);
   font-size: 1rem;
-  width: 100vw;
   text-align: center;
-  padding: 1rem;
 }
 
 /* || MENU */
@@ -393,10 +393,10 @@ footer {
 .menu-link {
   display: inline;
   margin: 1rem;
+  border: 1px solid var(--faded-rose);
+  color: var(--faded-rose);
   padding: 0.5rem;
   font-size: 1.5rem;
-  color: var(--faded-rose);
-  border: 1px solid var(--faded-rose);
   text-decoration: none;
 }
 
@@ -406,43 +406,43 @@ footer {
 }
 
 .menu-item-image {
-  width: 300px;
   overflow: cover;
   border-radius: 10px;
+  width: 300px;
 }
 
 .menu-category {
-  width: 100%;
-  max-width: 800px;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  width: 100%;
+  max-width: 800px;
 }
 
 .menu-category-label {
+  margin-top: 1rem;
   color: var(--text-color);
   font-family: "Sacramento";
   font-size: 3.5rem;
   text-align: center;
-  margin-top: 1rem;
 }
 
 .menu-item {
-  width: 75%;
-  margin: 1rem;
   display: flex;
   flex-flow: column nowrap;
   justify-items: center;
   align-items: top;
+  margin: 1rem;
+  width: 75%;
 }
 
 .item-and-price {
-  width: 100%;
-  padding: 1rem;
   display: flex;
   flex-wrap: nowrap;
-  font-size: 1.75rem;
   justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+  font-size: 1.75rem;
 }
 
 .menu-item ul li {
@@ -450,8 +450,8 @@ footer {
 }
 
 .item-details {
-  width: 100%;
   padding: 1rem;
+  width: 100%;
 }
 
 /* About */
@@ -464,10 +464,10 @@ footer {
 }
 
 .about-subsection {
-  margin: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  margin: 2rem;
 }
 
 .about-subsection-text {
@@ -475,9 +475,9 @@ footer {
 }
 
 .about-subsection-text h2 {
+  margin: 2rem 0rem;
   font-size: 2rem;
   text-align: center;
-  margin: 2rem 0rem;
 }
 
 .about-subsection-text p {
@@ -489,8 +489,8 @@ footer {
 }
 
 .about-subsection img {
-  width: 500px;
   border-radius: 5px;
+  width: 500px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -518,15 +518,15 @@ footer {
 
 /* CONTACT */
 .contact-note {
+  margin: 1rem;
   font-size: 2rem;
   text-align: center;
-  margin: 1rem;
 }
 
 .contact-info {
+  margin: 2rem;
   font-size: 2rem;
   text-align: center;
-  margin: 2rem;
 }
 
 .cafe-hours {
@@ -542,16 +542,16 @@ table {
 }
 
 tr {
-  width: 100%;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  width: 100%;
 }
 
 td {
+  padding: 0.5rem;
   color: var(--text-color);
   font-size: 2rem;
-  padding: 0.5rem;
 }
 
 /* BOOK */
@@ -563,39 +563,39 @@ td {
 }
 
 form {
-  color: rgb(62, 62, 62);
-  border-radius: 7px;
-  font-size: 2rem;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
+  border-radius: 7px;
+  padding: 1rem;
   width: 100%;
   max-width: 800px;
-  padding: 1rem;
+  color: rgb(62, 62, 62);
+  font-size: 2rem;
 }
 
 .form-item {
-  margin: 0.5rem;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
+  margin: 0.5rem;
 }
 
 .form-label {
   margin: 0.5rem;
-  font-size: 1.25rem;
   color: var(--faded-rose);
+  font-size: 1.25rem;
   text-align: center;
   font-family: var(--secondary-font);
 }
 
 .form-field {
   margin: 0.5rem;
+  border: 1px solid grey;
+  border-radius: 0px;
   padding: 0.5rem;
   font-size: 1.5rem;
   font-family: var(--secondary-font);
-  border: 1px solid grey;
-  border-radius: 0px;
 }
 
 .form-field:focus {
@@ -604,9 +604,9 @@ form {
 
 .contact-label {
   float: left;
-  text-align: left;
   width: 20vw;
   color: rgb(62, 62, 62);
+  text-align: left;
 }
 
 .additional-notes {
@@ -619,14 +619,13 @@ form {
 }
 
 .submit-btn {
-  color: pink;
-  background-color: rgb(62, 62, 62);
-
-  border-radius: 7px;
-  border: 2px solid var(--background-shade);
-  font-size: 1.5rem;
   margin: 1rem;
+  border: 2px solid var(--col-background);
+  border-radius: 7px;
   padding: 1rem;
+  background-color: rgb(62, 62, 62);
+  color: pink;
+  font-size: 1.5rem;
 }
 
 .submit-btn:hover {
